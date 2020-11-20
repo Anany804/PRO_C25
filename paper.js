@@ -6,6 +6,7 @@ class Paper{
             density:0.5
         }
         this.body = Bodies.circle(x, y, radius, options);
+        this.image = loadImage('paper.png');
         World.add(world, this.body)
     }
 
@@ -14,11 +15,8 @@ class Paper{
         
         push ()
         translate(pos.x, pos.y);
-        rectMode(CENTER);
-        strokeWeight(3);
-        fill("blue");
-        stroke("white");
-        ellipse(0, 0, this.radius, this.radius);
+        imageMode(CENTER);
+        image(this.image, this.radius);
         pop ()
         
     }
