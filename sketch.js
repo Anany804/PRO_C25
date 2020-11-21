@@ -23,6 +23,17 @@ function setup() {
 	ground = new Ground(600, 390, 1200, 10);
 	paper1 = new Paper(200, 200, 10);
 	bin = new Bin(800, 20, 10, 10);
+	
+	var render = Render.create({
+	  element: document.body,
+	  engine: engine,
+	  options: {
+	    width: 1200,
+	    height: 700,
+	    wireframes: false
+	  }
+	});
+	
 	Engine.run(engine);
   
 }
