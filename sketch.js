@@ -40,9 +40,10 @@ function draw() {
 	bin.display();
 }
 
-function keyPressed(){
-	if (keyCode === "UP_ARROW"){
-		paper1.velocityX = 8;
-		paper1.velocityY = -5;
-	}
+function keyPressed() {
+  	if (keyCode === UP_ARROW) {
+
+    	Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:85,y:-85});
+    
+  	}
 }
