@@ -2,7 +2,7 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-const RENDER = Matter.RENDER;
+const Render = Matter.Render;
 var paper1;
 var ground;
 var bin;
@@ -34,15 +34,15 @@ function draw() {
   
   
   drawSprites();
-	// keyPressed();
+	keyPressed();
 	ground.display();
 	paper1.display();
 	bin.display();
 }
 
-// function keyPressed(){
-// 	if (keyCode === "SPACE"){
-// 		paper1.velocityX = 8;
-// 		paper1.velocityY = -5;
-// 	}
-// }
+function keyPressed(){
+	if (keyCode === "UP_ARROW"){
+		paper1.velocityX = 8;
+		paper1.velocityY = -5;
+	}
+}
